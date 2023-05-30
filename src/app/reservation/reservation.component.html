@@ -1,0 +1,41 @@
+
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <title>Título de la página</title>
+      <link rel="stylesheet" type="text/css" href="reservation.component.css">
+  </head>
+  <body>
+    <div class="reservation-container">
+        <h2 class="title">Make a Reservation</h2>
+      
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="passenger">Passenger Name:</label>
+            <input type="text" name="passenger" id="passenger" [(ngModel)]="reser.passenger" required>
+          </div>
+          <div class="form-group">
+            <label for="flight">Flight Number:</label>
+            <input type="text" name="flight" id="flight" [(ngModel)]="reser.flight" required>
+          </div>
+          <button type="submit" class="btn-submit">Make Reservation</button>
+        </form>
+      
+        <div class="reservations-container">
+          <h3 class="sub-title">Current Reservations:</h3>
+          <ul class="reservations-list">
+            <li *ngFor="let reservation of reservations">
+              <span class="reservation-id">{{ reservation.id }}</span>
+              <span class="reservation-passenger">{{ reservation.passenger }}</span>
+              <span class="reservation-flight">{{ reservation.flight }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </body>
+  </html>
+  
+  
+  
+  

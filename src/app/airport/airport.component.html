@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+  <html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <title>Aeropuertos</title>
+      <link rel="stylesheet" type="text/css" href="airport.component.css">
+  </head>
+  <body>
+    <h1>Airport Component</h1>
+
+    <div>
+      <h2>Aeropuerto:</h2>
+      <p><strong>ID:</strong> {{ aeropuerto.id }}</p>
+      <p><strong>IATA Code:</strong> {{ aeropuerto.iataCode }}</p>
+      <p><strong>Name:</strong> {{ aeropuerto.name }}</p>
+    </div>
+
+    <button (click)="crearAeropuerto()">Crear Aeropuerto</button>
+
+  </body>
+  </html>
+  

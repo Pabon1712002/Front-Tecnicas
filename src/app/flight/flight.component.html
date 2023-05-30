@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+  <html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <title>Vuelos</title>
+      <link rel="stylesheet" type="text/css" href="flight.component.css">
+  </head>
+  <body>
+    <div class="flight-container">
+      <h2>Flight Information</h2>
+      <div class="flight-details">
+        <div class="flight-number">
+          <span>Flight Number:</span> {{vuelo.flightNumber}}
+        </div>
+        <div class="flight-departure">
+          <span>Departure Date:</span> {{vuelo.departureDate}}
+        </div>
+        <div class="flight-departure">
+          <span>Departure Airport:</span> {{vuelo.departureAirportId}}
+        </div>
+        <div class="flight-arrival">
+          <span>Arrival Date:</span> {{vuelo.arrivalDate}}
+        </div>
+        <div class="flight-arrival">
+          <span>Arrival Airport:</span> {{vuelo.arrivalAirportId}}
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
+  

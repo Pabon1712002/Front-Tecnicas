@@ -1,0 +1,45 @@
+.flight-container {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .flight-container h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #004990;
+  }
+  
+  .flight-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .flight-details span {
+    font-weight: bold;
+  }
+  
+  .flight-number {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .flight-departure,
+  .flight-arrival {
+    width: 48%;
+    margin-bottom: 10px;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .flight-details {
+      flex-direction: column;
+    }
+  
+    .flight-details > div {
+      width: 100%;
+    }
+  }
+  
