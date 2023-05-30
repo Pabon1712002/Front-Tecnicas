@@ -3,25 +3,25 @@
   <head>
       <meta charset="UTF-8">
       <title>Aeropuertos</title>
-      <link rel="stylesheet" type="text/css" href="airport.component.css">
+      <link rel="stylesheet" type="text/css" href="plane.component.css">
   </head>
   <body>
     <div>
         <h1>Aviones</h1>
-      
+
         <form (submit)="crearAvion()">
           <label for="planeNumber">Número de avión:</label>
           <input type="text" id="planeNumber" [(ngModel)]="nuevoAvion.planeNumber" required>
-      
+
           <label for="planeName">Nombre de avión:</label>
           <input type="text" id="planeName" [(ngModel)]="nuevoAvion.planeName" required>
-      
+
           <label for="planeCode">Código de avión:</label>
           <input type="text" id="planeCode" [(ngModel)]="nuevoAvion.planeCode" required>
-      
+
           <button type="submit">Crear Avión</button>
         </form>
-      
+
         <ul>
           <li *ngFor="let avion of aviones">
             <h3>{{ avion.planeNumber }}</h3>
@@ -30,7 +30,7 @@
           </li>
         </ul>
       </div>
-      
+
   </body>
   </html>
-  
+

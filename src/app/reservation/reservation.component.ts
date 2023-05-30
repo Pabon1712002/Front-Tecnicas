@@ -13,22 +13,23 @@ export class ReservationComponent implements OnInit {
     passenger: '',
     flight: ''
   }
-
+  reservations: any[] = [];
   constructor( private ReserService: ReservationServService ){}
-  ngOnInit(): void {
-    
+  onSubmit(): void {
+  this.ReserService.crearReservacion( this.reser ).subscribe( res =>{
+    console.log("Post -> ", res )
 
-    this.ReserService.crearReservacion( this.reser ).subscribe( res =>{
-      console.log("Post -> ", res )
+    this.ReserService.obtenerReservacion().subscribe( res2 =>{
+      console.log("get -> ", res2)
 
-      this.ReserService.obtenerReservacion().subscribe( res2 =>{
-        console.log("get -> ", res2)
-
-        this.ReserService.obtenerReservacionporid().subscribe( res3 =>{
-          console.log("get -> ", res3)
-        })
+      this.ReserService.obtenerReservacionporid().subscribe( res3 =>{
+        console.log("get -> ", res3)
       })
     })
+  })
+}
+  ngOnInit(): void {
+
   }
 
 }
